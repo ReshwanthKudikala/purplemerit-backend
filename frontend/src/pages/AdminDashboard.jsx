@@ -14,8 +14,9 @@ const AdminDashboard = () => {
       setError("");
 
       const res = await api.get(`/admin/users?page=${pageNumber}`);
-      setUsers(res.data.users || []);
-      setTotalPages(res.data.totalPages || 1);
+      setUsers(res.data.data || []);
+      setTotalPages(res.data.pagination.totalPages || 1);
+
       setPage(pageNumber);
     } catch (err) {
       setError(
