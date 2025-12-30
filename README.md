@@ -35,7 +35,7 @@ The goal of this project is to showcase:
 - Context API
 - Axios
 - Tailwind CSS
-- Deployment: Vercel / Netlify
+- Deployment: Netlify
 
 ---
 
@@ -105,13 +105,12 @@ Copy code
 ## Setup Instructions
 
 ### Backend Setup
-
 ```bash
 cd backend
 npm install
-Create a .env file inside the backend folder with the following variables:
+Create a .env file inside the backend folder:
 
-env
+makefile
 Copy code
 PORT=
 MONGO_URI=
@@ -129,7 +128,7 @@ npm install
 npm run dev
 Create a .env file inside the frontend folder:
 
-env
+makefile
 Copy code
 VITE_API_BASE_URL=
 Environment Variables
@@ -143,37 +142,40 @@ JWT_SECRET
 Frontend
 VITE_API_BASE_URL
 
-⚠️ All sensitive values are stored in .env files and excluded from version
-control using .gitignore.
+⚠️ All sensitive values are stored in .env files and excluded from version control using .gitignore.
 
 Deployment Instructions
 Backend Deployment (Railway)
 Created a Railway project
 
-Connected the GitHub backend repository
+Connected the GitHub repository
 
-Added required environment variables in the Railway dashboard
+Added required environment variables in Railway dashboard
 
 Enabled automatic deployments on push
 
-Frontend Deployment (Vercel / Netlify)
+Frontend Deployment (Netlify)
 Connected the GitHub repository
 
-Selected the /frontend directory as the project root
+Selected /frontend directory as the base directory
+
+Build command: npm run build
+
+Publish directory: frontend/dist
 
 Added VITE_API_BASE_URL environment variable
 
 Triggered production build and deployment
 
 Live Deployment Links
-Backend API
-https://purplemerit-backend-production.up.railway.app
+Frontend (Netlify):
+https://purplemerit-user-management.netlify.app/
 
-Frontend Application
-(To be added after frontend deployment)
+Backend (Railway):
+https://purplemerit-backend-production.up.railway.app/
 
-API Documentation / Postman Collection
-(To be added)
+API Base URL:
+https://purplemerit-backend-production.up.railway.app/api
 
 API Documentation
 Authentication APIs
@@ -216,10 +218,9 @@ Copy code
   "success": true,
   "token": "jwt_token_here"
 }
-User APIs
+User APIs (Protected)
 Get Current User
 GET /api/users/me
-(Protected)
 
 Response:
 
@@ -275,8 +276,9 @@ Deactivate User
 PATCH /api/admin/users/:id/deactivate
 
 Deliverables
-1. GitHub Repository
-Single public GitHub repository
+GitHub Repository
+
+Single public repository
 
 Separate /frontend and /backend folders
 
@@ -284,40 +286,36 @@ Proper incremental commit history
 
 No sensitive data committed
 
-.env files excluded using .gitignore
+Live Deployment
 
-2. Live Deployment Links
 Backend deployed on Railway
 
-Frontend deployed on Vercel / Netlify
+Frontend deployed on Netlify
 
 Database hosted on MongoDB Atlas
 
-3. Walkthrough Video (3–5 minutes)
-The walkthrough video demonstrates:
+Walkthrough Video (3–5 minutes)
 
-User signup and login
+User signup & login
 
-JWT-based authentication
+JWT authentication
 
-Role-based access control (admin vs user)
+Role-based access control
 
-Admin dashboard (activate/deactivate users)
+Admin dashboard actions
 
-User profile update and password change
+Backend API demo
 
-Backend API demonstration using browser or Postman
-
-Live deployed application links
+Live deployed links
 
 📌 Video Link: (To be added)
 
 Bonus Implementations
-Backend unit and integration tests using Jest and Supertest
+Backend unit & integration tests
 
-Secure password hashing and token handling
+Secure password hashing and JWT handling
 
-Clean project architecture with separation of concerns
+Clean, modular project architecture
 
 Author
 Reshwanth Kudikala
