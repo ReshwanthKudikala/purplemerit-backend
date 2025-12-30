@@ -71,7 +71,6 @@ backend/
 └── package-lock.json
 
 shell
-Copy code
 
 ### Frontend
 frontend/
@@ -98,7 +97,6 @@ frontend/
 └── README.md
 
 yaml
-Copy code
 
 ---
 
@@ -111,25 +109,21 @@ npm install
 Create a .env file inside the backend folder:
 
 makefile
-Copy code
 PORT=
 MONGO_URI=
 JWT_SECRET=
 Run the backend locally:
 
 bash
-Copy code
 npm run dev
 Frontend Setup
 bash
-Copy code
 cd frontend
 npm install
 npm run dev
 Create a .env file inside the frontend folder:
 
 makefile
-Copy code
 VITE_API_BASE_URL=
 Environment Variables
 Backend
@@ -185,7 +179,6 @@ POST /api/auth/signup
 Request:
 
 json
-Copy code
 {
   "fullName": "Test User",
   "email": "test@example.com",
@@ -194,7 +187,6 @@ Copy code
 Response:
 
 json
-Copy code
 {
   "success": true,
   "token": "jwt_token_here"
@@ -205,7 +197,6 @@ POST /api/auth/login
 Request:
 
 json
-Copy code
 {
   "email": "test@example.com",
   "password": "password123"
@@ -213,7 +204,6 @@ Copy code
 Response:
 
 json
-Copy code
 {
   "success": true,
   "token": "jwt_token_here"
@@ -225,7 +215,6 @@ GET /api/users/me
 Response:
 
 json
-Copy code
 {
   "success": true,
   "data": {
@@ -241,7 +230,6 @@ PUT /api/users/profile
 Request:
 
 json
-Copy code
 {
   "fullName": "Updated Name",
   "email": "updated@example.com"
@@ -252,7 +240,6 @@ PUT /api/users/change-password
 Request:
 
 json
-Copy code
 {
   "currentPassword": "oldPassword",
   "newPassword": "newPassword"
@@ -264,7 +251,6 @@ GET /api/admin/users?page=1
 Response:
 
 json
-Copy code
 {
   "users": [],
   "totalPages": 3
