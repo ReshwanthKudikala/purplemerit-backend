@@ -294,7 +294,7 @@ Backend API demo
 
 Live deployed links
 
-📌 Video Link: (To be added)
+📌 Video Link: https://drive.google.com/file/d/105mJ21_HxwrE-ggyqLMcQLdLR2sdiwZ7/view?usp=drivesdk
 
 Bonus Implementations
 Backend unit & integration tests
